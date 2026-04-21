@@ -9,15 +9,12 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "hardware.dtsi"  
 
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
 #define FN 4
-
-
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -77,8 +74,8 @@
             display-name = "adjust";
             bindings = <
 &none              &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                               &none            &none            &none            &none            &none            &bt BT_CLR
-&ext_power EP_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &none         &rgb_ug RGB_EFF                            &none            &rgb_ug RGB_EFF  &none            &none            &none            &none
-&none              &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &none         &rgb_ug RGB_TOG                            &tog 5           &none            &none            &none            &none            &none
+&ext_power EP_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &none         &rgb_ug RGB_EFF                            &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &none
+&none              &none            &none            &none            &none         &none                                      &tog 5           &none            &none            &none            &none            &none
 &none              &none            &none            &none            &none         &none            &rgb_ug RGB_TOG    &none  &none            &none            &none            &none            &none            &none
                                     &none            &none            &none         &none            &none              &none  &none            &none            &none            &none
             >;
